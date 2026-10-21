@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>고생대의 환경과 생물</title>
+<style>
+:root{color-scheme:dark;--bg:#2a0608;--card:#4a0d10;--tx:#fff1cf;--ac:#ffcc33;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}body{margin:0;background:repeating-linear-gradient(135deg,#2a0608 0 22px,#340709 22px 44px);color:var(--tx);font-family:"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.5}
+section{max-width:960px;margin:0 auto;padding:48px 16px}
+h1{font-size:clamp(28px,6vw,48px);margin:0}h2{font-size:24px;margin:0 0 10px;color:#4a0b0e;background:var(--ac);display:inline-block;padding:4px 16px;transform:skew(-6deg);border-left:10px solid #c4161c;font-weight:900}h2::before{content:'★ ';color:#c4161c}
+p{margin:6px 0;font-size:15px}svg{width:100%;height:auto;display:block}
+.card{background:var(--card);border:2px solid #c4161c;border-radius:6px;padding:14px;margin:12px 0;overflow:hidden;box-shadow:6px 6px 0 #1a0204}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.big{font-size:40px;font-weight:800;color:var(--ac)}
+.rv{opacity:0;transform:translateY(30px);transition:1s}.rv.in{opacity:1;transform:none}
+button{background:var(--ac);color:#222;border:0;border-radius:20px;padding:8px 16px;font-weight:700;cursor:pointer;margin:4px 4px 4px 0}
+details{font-size:13px;opacity:.85}
+.bar{height:26px;background:#1a0204;border-radius:13px;overflow:hidden;position:relative}
+.bar i{position:absolute;top:0;bottom:0;left:0;width:0;transition:width 2s}
+.in .bar i{width:var(--w)}
+.tl{display:flex;gap:2px}.tl b{flex:1;text-align:center;font-size:11px;padding:6px 0;transform:scaleY(0);transition:.6s;transform-origin:bottom}.in .tl b{transform:none}
+#cl{transition:background 1.5s;border-radius:16px}#cl.w{background:linear-gradient(#ff7a5c,#b3261e)}#cl.c{background:linear-gradient(#bfe3ff,#2a6fbd)}
+.sun,.snow,.ice{transition:opacity 1s}#cl.c .sun{opacity:0}#cl.w .snow,#cl.w .ice{opacity:0}
+.cloud{animation:dr 14s linear infinite alternate}.fog{animation:dr 20s ease-in-out infinite alternate}
+@keyframes dr{to{transform:translateX(120px)}}
+.sn{animation:fall 5s linear infinite}@keyframes fall{to{transform:translateY(240px)}}
+.mol{animation:fl 7s ease-in-out infinite alternate}@keyframes fl{50%{transform:translate(40px,-25px)}to{transform:translate(-30px,20px)}}
+.sea{transition:transform 2s}.hi .sea{transform:translateY(-35px)}
+.wv{animation:wv 3s ease-in-out infinite alternate}@keyframes wv{to{transform:translateX(-30px)}}
+.line{stroke-dasharray:600;stroke-dashoffset:600}.in .line{stroke-dashoffset:0;transition:stroke-dashoffset 3s}
+.m .k{transition:transform 3s ease-in-out}
+.k1{transform:translate(50px,60px)}.k2{transform:translate(120px,150px)}.k3{transform:translate(190px,50px)}.k4{transform:translate(260px,40px)}.k5{transform:translate(290px,140px)}
+.m.p .k1{transform:translate(120px,95px)}.m.p .k2{transform:translate(140px,150px)}.m.p .k3{transform:translate(205px,80px)}.m.p .k4{transform:translate(250px,85px)}.m.p .k5{transform:translate(255px,140px)}
+.sway{animation:sw 4s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:bottom}@keyframes sw{to{transform:rotate(3deg)}}
+.bob{animation:bob 3s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-8px)}}
+.gone{opacity:0!important;transform:scale(.2) rotate(40deg);transition:1s}.ic{transition:1s;transform-box:fill-box;transform-origin:center}
+.lava{animation:lv 1.6s ease-out infinite}@keyframes lv{from{transform:translateY(0);opacity:1}to{transform:translateY(-90px);opacity:0}}
+.ash{animation:dr 9s ease-in-out infinite alternate}
+.ray{animation:spin 20s linear infinite;transform-origin:200px 160px}@keyframes spin{to{transform:rotate(360deg)}}
+.pul{animation:pu 1.4s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}@keyframes pu{to{transform:scale(1.12)}}
+.bl{animation:bl 2.4s ease-in infinite}@keyframes bl{from{transform:translateY(-60px);opacity:0}30%{opacity:1}to{transform:translateY(60px);opacity:0}}
+.cap{font-size:12px;opacity:.7}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<pattern id="dia" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M5 0L10 5L5 10L0 5Z" fill="#6b4a2b" stroke="#3b2a18"/></pattern>
+<symbol id="tri" viewBox="0 0 100 60"><ellipse cx="50" cy="30" rx="44" ry="20" fill="#9a7650"/><ellipse cx="20" cy="30" rx="17" ry="21" fill="#b08a5e"/><ellipse cx="84" cy="30" rx="13" ry="14" fill="#b08a5e"/><g stroke="#4a3320" stroke-width="2"><path d="M38 12V48M45 10V50M52 10V50M59 11V49M66 14V46M73 18V42M32 30H78"/></g><circle cx="16" cy="20" r="3" fill="#222"/><circle cx="16" cy="40" r="3" fill="#222"/></symbol>
+<symbol id="tik" viewBox="0 0 200 70"><path d="M150 38Q185 20 198 38Q185 56 150 38Z" fill="#4c8a5a"/><ellipse cx="95" cy="38" rx="62" ry="17" fill="#5ea06b"/><path d="M8 38Q30 18 70 24L70 52Q30 58 8 38Z" fill="#6fb37c"/><circle cx="40" cy="26" r="4" fill="#fff"/><circle cx="41" cy="26" r="2" fill="#111"/><path d="M85 50L70 68L95 62Z" fill="#8bc79a" stroke="#2d5a3a" stroke-width="2"/><path d="M82 55L76 65M86 56L84 64M90 55L92 62" stroke="#2d5a3a" stroke-width="1.5"/><g fill="#3c7a4a" opacity=".6"><circle cx="100" cy="34" r="3"/><circle cx="115" cy="38" r="3"/><circle cx="130" cy="34" r="3"/><circle cx="108" cy="44" r="3"/></g></symbol>
+<symbol id="dim" viewBox="0 0 220 120"><path d="M70 55Q78 8 95 45Q105 0 118 45Q130 8 142 48Q148 26 152 58Z" fill="#e0603a" stroke="#7a2a12" stroke-width="2"/><path d="M95 45V55M118 45V55M142 50V58" stroke="#7a2a12"/><path d="M160 66Q205 70 215 105" stroke="#a8683c" stroke-width="8" fill="none" stroke-linecap="round"/><ellipse cx="110" cy="70" rx="55" ry="20" fill="#b9783f"/><ellipse cx="42" cy="68" rx="26" ry="13" fill="#c98a50"/><path d="M20 72L26 80L32 72L38 80L44 72" stroke="#fff" fill="#fff"/><circle cx="46" cy="62" r="3.5" fill="#111"/><g fill="#9a6232"><rect x="66" y="82" width="12" height="28" rx="5"/><rect x="132" y="82" width="12" height="28" rx="5"/></g></symbol>
+<symbol id="lep" viewBox="0 0 80 120"><path d="M36 120V40H44V120Z" fill="url(#dia)"/><g stroke="#2f7a3a" stroke-width="4" fill="none" stroke-linecap="round"><path d="M40 40L20 18M40 40L60 18M20 18L8 8M20 18L24 4M60 18L72 8M60 18L56 4"/></g><g fill="#3fa04c"><circle cx="8" cy="8" r="6"/><circle cx="24" cy="4" r="6"/><circle cx="72" cy="8" r="6"/><circle cx="56" cy="4" r="6"/></g></symbol>
+</defs></svg>
+
+<section style="text-align:center;padding-top:30px">
+<svg viewBox="0 0 200 200" style="width:180px;margin:0 auto"><g class="pul"><circle cx="100" cy="105" r="80" fill="#a8101a" stroke="#ffcc33" stroke-width="6"/></g><circle cx="100" cy="105" r="92" fill="none" stroke="#ffcc33" stroke-width="5" stroke-dasharray="6 8"/><g transform="translate(100 48) scale(.8)"><path d="M0-22L6-7 22-7 9 3 14 19 0 10-14 19-9 3-22-7-6-7Z" fill="#ffcc33"/></g><g transform="rotate(-40 100 120)" fill="#ffcc33"><rect x="96" y="72" width="8" height="90" rx="3"/><path d="M72 66H108L136 76L108 86H72Z"/></g><g transform="rotate(40 100 120)"><rect x="96" y="118" width="8" height="46" rx="3" fill="#ffcc33"/><path d="M100 120C44 126 36 62 100 58C68 72 68 104 100 120Z" fill="#ffcc33"/><path d="M62 80L76 84M58 94L72 96M64 108L78 106" stroke="#a8101a" stroke-width="2"/></g></svg><h1 style="color:#ffcc33;text-shadow:4px 4px 0 #8a0f16;letter-spacing:2px">고생대의 환경과 생물</h1><p style="background:#c4161c;display:inline-block;padding:4px 18px;font-weight:800">지층 위에 세운 5억 년 · 보고, 움직이고, 눌러 보는 고생대!</p><p class="cap">※ 암석 채취용 지질 망치 + 삼엽충 마디무늬 낫 = 고생대식 로컬라이징 문장</p>
+<div class="card"><svg viewBox="0 0 600 220"><rect width="600" height="220" fill="#8a0f16"/><g class="wv" opacity=".5"><path d="M0 40Q50 20 100 40T200 40T300 40T400 40T500 40T600 40V0H0Z" fill="#ff6a4a"/></g>
+<g class="bob"><use href="#tri" x="60" y="140" width="110" height="66"/></g><g class="bob" style="animation-delay:.7s"><use href="#tik" x="250" y="70" width="170" height="60"/></g><g class="bob" style="animation-delay:1.2s"><use href="#tri" x="440" y="150" width="90" height="54"/></g>
+<path d="M0 205Q150 185 300 205T600 200V220H0Z" fill="#c9a66b"/></svg></div>
+<p class="cap">모둠: 1반 6모둠 · 스크롤을 내려 보세요 ↓</p></section>
+
+<section class="rv"><h2>① 시대 구분</h2>
+<div class="card"><div class="bar"><i style="--w:100%;background:#8a1a20"></i><i style="--w:6.3%;left:88.2%;background:var(--ac)"></i></div>
+<p class="cap">전체 지질 시대 가로띠 중 주황색이 고생대</p>
+<div class="tl" style="margin-top:8px"><b style="background:#8a6">캄브리아기</b><b style="background:#6a9;transition-delay:.2s">오르도비스기</b><b style="background:#7ab;transition-delay:.4s">실루리아기</b><b style="background:#c96;transition-delay:.6s">데본기</b><b style="background:#697;transition-delay:.8s">석탄기</b><b style="background:#c75;transition-delay:1s">페름기</b></div>
+<svg viewBox="0 0 600 40"><line x1="20" y1="20" x2="580" y2="20" stroke="#fff" stroke-dasharray="4"/><g class="bob"><circle cx="30" cy="20" r="9" fill="var(--ac)"><animate attributeName="cx" values="30;570;30" dur="12s" repeatCount="indefinite"/></circle></g></svg></div>
+<div class="g"><div class="card"><div class="big"><span data-n="543">0</span>0만 년 전</div><p>고생대 시작(약 5억 4300만 년 전)</p></div>
+<div class="card"><div class="big"><span data-n="252">0</span>0만 년 전</div><p>고생대 종료(약 2억 5200만 년 전)</p></div>
+<div class="card"><div class="big"><span data-n="6.3" data-d="1">0</span>%</div><p>전체 지질 시대에서 차지하는 비율</p></div></div>
+<div class="g"><div class="card"><svg viewBox="0 0 200 70"><use href="#tri" x="10" y="8" width="90" height="54"/><g class="pul"><path d="M130 35l8-20 8 20 20 2-16 12 6 20-18-12-18 12 6-20-16-12z" fill="var(--ac)"/></g></svg>
+<p><b>시작 기준: 캄브리아기 대폭발.</b> 삼엽충 등 복잡한 다세포 생물이 화석 기록에 대거 등장하는 시점이며, 선캄브리아 시대의 단순한 생물상과 구분되는 지질학적 경계다.</p></div>
+<div class="card"><svg viewBox="0 0 200 70"><circle cx="100" cy="35" r="26" fill="none" stroke="#e55" stroke-width="3" class="pul"/><path d="M60 62L140 8" stroke="#e55" stroke-width="3"/></svg><p><b>종료 기준:</b> 페름기와 트라이아스기 사이에 일어난 ‘고생대 말 대멸종’(⑧ 참고).</p></div></div>
+<details class="card"><summary>원문 메모: 백악기–팔레오세 경계 설명 (펼치기)</summary><p>중생대 백악기와 신생대 팔레오세를 구분하는 이 경계는 비조류 공룡과 암모나이트를 포함한 전 지구 생물종의 약 75%가 사라진 대멸종 사건으로 정의가 된다. 이 시기 지층에서는 소행성 충돌의 증거인 이리듐(Iridium) 농도의 급격한 상승과 검은 구상체(spherules)를 포함한 점토층이 전 세계적으로 발견된다. 이 사건 이후 포유류의 거대 진화와 현대적 식물군의 확산이 시작되었다.</p></details></section>
+
+<section class="rv"><h2>② 기후</h2><p>버튼을 눌러 시기를 바꿔 보세요.</p>
+<button onclick="cl('w')">캄브리아기</button><button onclick="cl('c')">오르도비스기 말</button><button onclick="cl('c')">석탄기-페름기 초</button>
+<div id="cl" class="w"><svg viewBox="0 0 600 260"><defs><filter id="bl"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<g class="sun"><circle cx="500" cy="60" r="34" fill="#ffe066" class="pul"/></g>
+<g class="cloud"><ellipse cx="100" cy="60" rx="60" ry="22" fill="#fff" opacity=".9"/><ellipse cx="140" cy="50" rx="40" ry="20" fill="#fff" opacity=".9"/></g><g class="cloud" style="animation-duration:19s"><ellipse cx="300" cy="100" rx="70" ry="22" fill="#eee" opacity=".85"/></g>
+<g class="fog" filter="url(#bl)"><rect x="-40" y="170" width="300" height="40" fill="#fff" opacity=".6"/><rect x="250" y="190" width="300" height="40" fill="#fff" opacity=".5"/></g>
+<g class="snow" fill="#fff"><circle class="sn" cx="80" cy="0" r="4"/><circle class="sn" cx="200" cy="-40" r="3" style="animation-delay:1s"/><circle class="sn" cx="330" cy="-10" r="4" style="animation-delay:2s"/><circle class="sn" cx="450" cy="-60" r="3" style="animation-delay:.5s"/><circle class="sn" cx="540" cy="-20" r="4" style="animation-delay:3s"/></g>
+<g class="ice"><path d="M0 260V215L60 190L130 225L220 180L320 230L430 190L520 225L600 200V260Z" fill="#f4fbff"/></g></svg></div>
+<div class="card"><p id="clt"><b>초기(캄브리아기):</b> 매우 따뜻한 온실 기후. 이 온화한 환경이 생명체가 급격히 늘어나는 배경이 되었다.</p><p>고생대에는 오르도비스기 말과 석탄기-페름기 초에 걸쳐 총 2번의 큰 빙하기가 있었다.</p></div></section>
+
+<section class="rv"><h2>③ 대기·해양 환경</h2>
+<div class="g"><div class="card"><p><b>산소 농도</b>: 실루리아기·데본기에 육상 식물이 진화하며 광합성량이 비약적으로 늘어 크게 증가.</p>
+<svg viewBox="0 0 300 160"><path d="M20 140H290M20 140V15" stroke="#fff" fill="none"/><path class="line" d="M30 125C100 120 130 90 170 60S250 30 285 25" stroke="#7fe3a0" stroke-width="4" fill="none"/><text x="30" y="155" fill="#fff" font-size="10">실루리아기 → 데본기</text><text x="25" y="12" fill="#7fe3a0" font-size="11">O₂ ↑</text></svg></div>
+<div class="card"><p><b>이산화 탄소</b>: 활발한 화산 활동과 제한적인 육상 진출로 현대의 수십 배 → 강력한 온실효과.</p>
+<svg viewBox="0 0 300 160" id="co2"><rect width="300" height="160" fill="#2a1f1a" rx="8"/><path d="M0 160L40 130L80 160" fill="#7a2f1a"/><g id="mols"></g></svg></div></div>
+<div class="card" id="sl"><p>해수면 단면도 · <button onclick="sl(1)">캄브리아기(해수면 높음)</button><button onclick="sl(0)">페름기(해수면 낮음)</button></p>
+<svg viewBox="0 0 600 220"><rect width="600" height="220" fill="#16394a"/><path d="M330 150Q400 120 440 100L600 90V220H330Z" fill="#b99a64"/><path d="M0 200Q150 170 330 175L330 220H0Z" fill="#8c7448"/>
+<g class="sea"><rect x="0" y="115" width="600" height="110" fill="#2e9fc9" opacity=".6"/><path class="wv" d="M0 115Q40 105 80 115T160 115T240 115T320 115T400 115T480 115T560 115T640 115" stroke="#cfefff" stroke-width="3" fill="none"/>
+<use href="#tri" x="60" y="150" width="70" height="42"/><use href="#tik" x="190" y="125" width="110" height="38"/></g>
+<g stroke="#fff" stroke-dasharray="3"><path d="M10 80H50M10 80V150"/></g><text x="55" y="84" fill="#fff" font-size="12">해수면</text></svg></div></section>
+
+<section class="rv"><h2>④ 수륙 분포</h2><p>캄브리아기엔 해수면이 높아 대부분의 대륙이 얕은 바다(대륙붕)에 잠겨 있었다. 페름기에 판게아가 형성되며 해수면이 낮아져 대륙이 드러났고, 거대한 해양 판탈라사가 생겼다.</p>
+<button onclick="mp(1)">대륙 합치기(판게아)</button><button onclick="mp(0)">대륙 가르기</button>
+<div class="card"><svg viewBox="0 0 400 300" id="map" class="m"><circle cx="200" cy="150" r="145" fill="#1c6f9c"/><circle cx="200" cy="150" r="145" fill="none" stroke="#8fd" stroke-width="2"/>
+<g fill="#7ba05b" stroke="#7ba05b" stroke-width="8" stroke-linejoin="round"><path class="k k1" d="M0 0L30-14L50 8L30 36L0 28Z"/><path class="k k2" d="M0 0L40-20L80-6L70 40L20 60L-10 30Z"/><path class="k k3" d="M0 0L28-8L30 22L4 26Z"/><path class="k k4" d="M0 0L40-6L46 20L10 26Z"/><path class="k k5" d="M0 0L24-4L26 22L2 24Z"/></g>
+<text id="pt" x="200" y="285" text-anchor="middle" fill="#fff" font-size="13">대륙이 흩어진 바다</text></svg></div></section>
+
+<section class="rv"><h2>⑤ 대표 동물</h2>
+<div class="card"><svg viewBox="0 0 600 240"><rect width="300" height="240" fill="#1c6f9c"/><rect x="300" width="300" height="240" fill="#6e9a58"/><path d="M280 240Q300 200 330 190L600 190V240Z" fill="#9c7e4c"/>
+<g class="bob"><use href="#tik" x="70" y="60" width="210" height="74"/></g><use href="#dim" x="370" y="90" width="210" height="115"/>
+<g class="wv" stroke="#cfefff" fill="none" stroke-width="3"><path d="M10 30Q40 20 70 30T130 30T190 30"/></g>
+<rect x="20" y="190" width="110" height="26" rx="13" fill="#143"/><text x="75" y="208" fill="#fff" text-anchor="middle" font-size="13">틱타알릭 · 해양</text><rect x="440" y="215" width="110" height="22" rx="11" fill="#242"/><text x="495" y="231" fill="#fff" text-anchor="middle" font-size="13">디메트론 · 육지</text></svg></div>
+<div class="g"><div class="card"><p><b>틱타알릭(해양생물)</b>: 물고기처럼 비늘과 지느러미가 있지만, 지느러미 안에 육상 척추동물의 팔다리와 비슷한 뼈 구조가 있었다.</p></div>
+<div class="card"><p><b>번성 이유</b>: 얕은 물과 물가에 적응한 튼튼한 지느러미로 물가에서 이동할 수 있었고, 이것이 육상 생활로 이어지는 진화에 도움이 되었다.</p></div>
+<div class="card"><p><b>디메트론</b>: 육지생물.</p></div></div></section>
+
+<section class="rv"><h2>⑥ 대표 식물</h2>
+<div class="card"><svg viewBox="0 0 600 240"><rect width="600" height="240" fill="#173a2a"/><path d="M0 220H600V240H0Z" fill="#4a3a22"/>
+<g class="sway"><path d="M70 220V170M70 190L55 170M70 180L86 160" stroke="#8fd08a" stroke-width="3"/></g>
+<g class="sway"><use href="#lep" x="190" y="30" width="110" height="190"/></g><g class="sway" style="animation-delay:1s"><use href="#lep" x="290" y="60" width="80" height="160"/></g>
+<g class="sway" style="animation-delay:.5s"><path d="M470 220V110M470 150L430 120M470 130L510 100M470 110L470 70" stroke="#3a7a3a" stroke-width="5" fill="none"/><circle cx="470" cy="62" r="14" fill="#2f7a3a"/><circle cx="428" cy="116" r="12" fill="#2f7a3a"/><circle cx="512" cy="96" r="12" fill="#2f7a3a"/><circle cx="500" cy="170" r="5" fill="#c97"/></g>
+<g fill="#fff" font-size="13" text-anchor="middle"><text x="70" y="238">고생대 이전: 단순</text><text x="270" y="20">고생대: 레피도덴드론 숲</text><text x="470" y="238">중생대: 종자식물 번성</text></g></svg></div>
+<p>고생대 이전에는 육상 식물이 비교적 단순했지만, 고생대에는 나무와 거대한 숲이 나타났다. 석탄기에는 레피도덴드론 같은 거대한 석송류가 습지에서 번성했고, 중생대에는 석송류 숲이 쇠퇴하며 종자식물이 더욱 번성했다.</p></section>
+
+<section class="rv"><h2>⑦ 표준화석</h2>
+<div class="card"><svg viewBox="0 0 600 260"><rect width="600" height="260" fill="#6aa8d6"/>
+<rect y="30" width="600" height="40" fill="#b08a5e"/><rect y="70" width="600" height="50" fill="#c9a66b"/><rect y="120" width="600" height="50" fill="#9a7650" /><rect y="170" width="600" height="45" fill="#7c5c3c"/><rect y="215" width="600" height="45" fill="#5a4630"/>
+<rect y="120" width="600" height="50" fill="none" stroke="var(--ac)" stroke-width="4" class="pul"/>
+<use href="#tri" x="60" y="127" width="70" height="38"/><use href="#tri" x="300" y="130" width="60" height="34"/><use href="#tri" x="470" y="125" width="70" height="40"/>
+<g fill="#fff" font-size="13"><text x="10" y="55">신생대 지층</text><text x="10" y="100">중생대 지층</text><text x="10" y="195">선캄브리아 시대 지층</text></g><text x="260" y="113" fill="var(--ac)" font-size="14" font-weight="700">↓ 고생대 지층: 삼엽충 화석</text></svg></div>
+<div class="g"><div class="card"><p><b>표준화석: 삼엽충</b> — 이 시대에서만 급격히 진화하고 멸종했기 때문이다.</p></div><div class="card"><p><b>조건 ①</b> 생존 기간이 짧아야 한다(Time Range).</p></div><div class="card"><p><b>알 수 있는 것</b> 지층의 생성 시기(지질 시대)</p></div></div></section>
+
+<section class="rv" id="ext"><h2>⑧ 시대 말 사건</h2>
+<p>약 2억 5,200만 년 전 고생대 말 페름기와 중생대 초 트라이아스기 사이, 지구 역사상 가장 파괴적이었던 ‘고생대 말 대멸종’이 일어났다.</p>
+<button onclick="ex()">다시 재생 ▶</button>
+<div class="card"><svg viewBox="0 0 600 300" id="exs"><rect width="600" height="300" fill="#3a1a14"/>
+<g class="ash"><ellipse cx="200" cy="40" rx="120" ry="28" fill="#555" opacity=".8"/><ellipse cx="330" cy="30" rx="100" ry="24" fill="#444" opacity=".8"/></g>
+<path d="M60 215L150 95H250L340 215Z" fill="#5a3a2a"/><path d="M150 95H250L235 110H165Z" fill="#e8501c"/>
+<g fill="#ff7a1c"><circle class="lava" cx="190" cy="90" r="7"/><circle class="lava" cx="210" cy="90" r="6" style="animation-delay:.5s"/><circle class="lava" cx="200" cy="90" r="8" style="animation-delay:1s"/></g>
+<text x="60" y="240" fill="#fff" font-size="13">시베리아 트랩(대규모 화산 활동)과 연쇄 작용</text>
+<g id="ics"><use class="ic" href="#tri" x="380" y="30" width="60" height="36"/><use class="ic" href="#tik" x="460" y="30" width="100" height="36"/><use class="ic" href="#dim" x="380" y="90" width="90" height="50"/><use class="ic" href="#lep" x="490" y="80" width="50" height="75"/><use class="ic" href="#tri" x="400" y="165" width="60" height="36"/><use class="ic" href="#tik" x="470" y="170" width="100" height="36"/></g>
+<rect x="20" y="255" width="560" height="30" fill="#222" rx="8"/><rect x="20" y="255" width="0" height="30" fill="#e55" rx="8" id="eb"/></svg></div>
+<div class="g"><div class="card"><div class="big"><span data-n="95">0</span>~96%</div><p>해양 생물종이 사라짐</p></div><div class="card"><div class="big"><span data-n="70">0</span>~75%</div><p>육상 생물종이 사라짐</p></div></div>
+<p>삼엽충도 이 격변을 끝으로 수억 년의 생존사를 마감했다. 주요 원인: 시베리아 트랩과 연쇄 작용.</p></section>
+
+<section class="rv"><h2>🎬 고생대 포스터 애니메이션 (반반)</h2>
+<div class="card"><svg viewBox="0 0 800 320"><defs><clipPath id="L"><rect width="400" height="320"/></clipPath><clipPath id="R"><rect x="400" width="400" height="320"/></clipPath></defs>
+<g clip-path="url(#L)"><rect width="400" height="320" fill="#b3121a"/><g id="rays" class="ray" fill="#e84a3a" opacity=".6"></g><path class="pul" d="M60 40l10 25 27 2-21 17 7 26-23-15-23 15 7-26-21-17 27-2z" fill="#ffd34d"/>
+<use href="#dim" x="90" y="120" width="230" height="125"/><rect x="40" y="250" width="320" height="48" fill="#ffd34d"/><text x="200" y="283" text-anchor="middle" font-size="26" font-weight="800" fill="#b3121a">삼엽충 동지들, 단결하라!</text></g>
+<g clip-path="url(#R)"><rect x="400" width="400" height="320" fill="#e9f1ff"/><g class="bob" fill="#fff"><ellipse cx="520" cy="50" rx="50" ry="18"/><ellipse cx="700" cy="70" rx="40" ry="15"/></g>
+<rect x="520" y="170" width="160" height="90" rx="8" fill="#2a5fc4"/><rect x="560" y="162" width="80" height="10" fill="#0d2a66"/>
+<use class="bl" href="#tri" x="580" y="90" width="40" height="24"/><use class="bl" href="#tri" x="620" y="80" width="30" height="18" style="animation-delay:1.2s"/>
+<g class="pul"><rect x="420" y="110" width="110" height="38" rx="14" fill="#fff" stroke="#2a5fc4" stroke-width="3"/><text x="475" y="134" text-anchor="middle" font-size="14" fill="#133">내 생각은 이래!</text></g>
+<g class="pul" style="animation-delay:.7s"><rect x="690" y="120" width="100" height="38" rx="14" fill="#fff" stroke="#2a5fc4" stroke-width="3"/><text x="740" y="144" text-anchor="middle" font-size="14" fill="#133">한 마리 한 표</text></g>
+<use href="#tik" x="430" y="205" width="90" height="32"/><rect x="420" y="268" width="360" height="30" fill="#2a5fc4"/><text x="600" y="289" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">함께 정하는 고생대!</text></g>
+<rect x="397" width="6" height="320" fill="#fff" class="pul"/></svg>
+<p class="cap">※ 포스터 스타일을 풍자적으로 섞은 연출입니다. 실제 인물·실제 선전 문구는 쓰지 않았어요.</p></div></section>
+
+<footer style="text-align:center;padding:30px 16px 50px;background:#ffcc33;color:#4a0b0e;border-top:8px solid #c4161c"><b>1반 6모둠</b><br>이재호, 이준영, 주하윤, 최민석</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+e.target.querySelectorAll('[data-n]').forEach(n=>{const T=+n.dataset.n,d=+(n.dataset.d||0);let t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/2000);n.textContent=(T*p).toFixed(d);if(p<1)requestAnimationFrame(f)})(t0)});
+if(e.target.id=='ext')setTimeout(ex,800)}),{threshold:.2});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+function cl(s){$('#cl').className=s;$('#clt').innerHTML=s=='w'?'<b>캄브리아기:</b> 매우 따뜻한 온실 기후. 생명체가 급격히 늘어나는 배경이 되었다.':'<b>빙하기:</b> 고생대에는 오르도비스기 말과 석탄기-페름기 초에 큰 빙하기가 있었다.'}
+function sl(h){$('#sl').className=h?'card hi':'card'}
+function mp(p){$('#map').setAttribute('class',p?'m p':'m');$('#pt').textContent=p?'판게아 + 거대한 해양 판탈라사':'대륙이 흩어진 바다'}
+(function(){let h='';for(let i=0;i<14;i++){const x=20+Math.random()*250,y=20+Math.random()*110;h+=`<g class="mol" style="animation-delay:-${i}s"><circle cx="${x}" cy="${y}" r="6" fill="#aaa"/><circle cx="${x-8}" cy="${y+4}" r="4" fill="#e55"/><circle cx="${x+8}" cy="${y+4}" r="4" fill="#e55"/></g>`}$('#mols').innerHTML=h;
+let r='';for(let i=0;i<16;i++)r+=`<polygon points="200,160 ${200+400*Math.cos(i*Math.PI/8)},${160+400*Math.sin(i*Math.PI/8)} ${200+400*Math.cos((i+.5)*Math.PI/8)},${160+400*Math.sin((i+.5)*Math.PI/8)}"/>`;$('#rays').innerHTML=r})();
+function ex(){const ic=[...document.querySelectorAll('#ics .ic')],b=$('#eb');ic.forEach(i=>i.classList.remove('gone'));b.setAttribute('width',0);b.style.transition='none';
+setTimeout(()=>{b.style.transition='width 6s linear';b.setAttribute('width',560)},50);ic.forEach((i,k)=>setTimeout(()=>i.classList.add('gone'),900*(k+1)))}
+</script></body></html>
